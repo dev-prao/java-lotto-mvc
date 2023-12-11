@@ -1,8 +1,11 @@
 package lotto;
 
+import java.util.Collections;
 import java.util.List;
 
 public class Lotto {
+
+    private Long id;
     private final List<Integer> numbers;
 
     public Lotto(List<Integer> numbers) {
@@ -16,5 +19,15 @@ public class Lotto {
         }
     }
 
-    // TODO: 추가 기능 구현
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(final Long id) {
+        this.id = id;
+    }
+
+    public List<Integer> getLotto() {
+        return Collections.unmodifiableList(numbers);
+    }
 }
