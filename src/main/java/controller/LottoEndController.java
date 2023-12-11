@@ -1,13 +1,10 @@
 package controller;
 
-import repository.LottoRepository;
 import view.LottoEndOutputView;
 
-public class LottoEndController {
+public class LottoEndController implements ControllableV2 {
 
-    private static final LottoRepository lottoRepository = LottoRepository.getInstance();
-
-    public void service() {
+    public void process() {
         LottoEndOutputView.printExit();
     }
 }
