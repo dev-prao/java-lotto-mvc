@@ -1,9 +1,9 @@
-package controller;
+package lotto.controller;
 
 import java.util.HashMap;
 import java.util.Map;
-import view.OutputViewFactory;
-import view.Viewable;
+import lotto.view.OutputViewFactory;
+import lotto.view.Viewable;
 
 public class ViewModel {
 
@@ -22,10 +22,6 @@ public class ViewModel {
 
     public void add(String key, Object object) {
         model.put(key, object);
-    }
-
-    public Map<String, Object> getModel() {
-        return model;
     }
 
     public void render() {

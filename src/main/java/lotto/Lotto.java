@@ -6,11 +6,11 @@ import java.util.List;
 public class Lotto {
 
     private Long id;
-    private final List<Integer> numbers;
+    private final List<Integer> lotto;
 
-    public Lotto(List<Integer> numbers) {
-        validate(numbers);
-        this.numbers = numbers;
+    public Lotto(List<Integer> lotto) {
+        validate(lotto);
+        this.lotto = lotto;
     }
 
     private void validate(List<Integer> numbers) {
@@ -28,6 +28,6 @@ public class Lotto {
     }
 
     public List<Integer> getLotto() {
-        return Collections.unmodifiableList(numbers);
+        return Collections.unmodifiableList(lotto);
     }
 }

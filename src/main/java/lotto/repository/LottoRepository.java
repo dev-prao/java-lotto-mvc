@@ -1,4 +1,4 @@
-package repository;
+package lotto.repository;
 
 import java.util.ArrayList;
 import java.util.HashMap;
