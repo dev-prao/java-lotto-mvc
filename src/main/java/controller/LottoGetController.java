@@ -1,21 +1,18 @@
 package controller;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import lotto.Lotto;
 import repository.LottoRepository;
-import view.LottoGetOutputView;
 
-public class LottoGetController implements ControllableV2 {
+public class LottoGetController implements ControllableV4 {
 
     private static final LottoRepository lottoRepository = LottoRepository.getInstance();
 
-    public void process() {
+    public ViewModel process() {
         List<Lotto> lottos = lottoRepository.findAll();
-        Map<String, Object> model = new HashMap<>();
-        model.put("lottos", mapToInteger(lottos));
-        LottoGetOutputView.printLottos(model);
+        ViewModel viewModel = new ViewModel("get");
+        viewModel.add("lottos", mapToInteger(lottos));
+        return viewModel;
     }
 
     private List<List<Integer>> mapToInteger(List<Lotto> lottos) {

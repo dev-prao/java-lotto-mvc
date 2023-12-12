@@ -7,7 +7,7 @@ import view.InputView;
 public class FrontController {
 
     private static final String END = "4";
-    private final Map<String, ControllableV2> controllers = new HashMap<>();
+    private final Map<String, ControllableV4> controllers = new HashMap<>();
 
     public FrontController() {
         controllers.put("1", new LottoBuyController());
@@ -28,7 +28,8 @@ public class FrontController {
     }
 
     private void service(final String path) {
-        ControllableV2 controllable = controllers.get(path);
-        controllable.process();
+        ControllableV4 controllableV4 = controllers.get(path);
+        ViewModel viewModel = controllableV4.process();
+        viewModel.render();
     }
 }

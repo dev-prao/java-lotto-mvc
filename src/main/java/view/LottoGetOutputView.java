@@ -3,9 +3,10 @@ package view;
 import java.util.List;
 import java.util.Map;
 
-public class LottoGetOutputView {
+public class LottoGetOutputView implements Viewable{
 
-    public static void printLottos(Map<String, Object> model) {
+    @Override
+    public void render(Map<String, Object> model) {
         System.out.println("구입한 로또 목록입니다.");
 
         List<List<Integer>> lottos = (List<List<Integer>>) model.get("lottos");

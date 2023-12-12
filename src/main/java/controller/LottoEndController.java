@@ -1,10 +1,9 @@
 package controller;
 
-import view.LottoEndOutputView;
+public class LottoEndController implements ControllableV4 {
 
-public class LottoEndController implements ControllableV2 {
-
-    public void process() {
-        LottoEndOutputView.printExit();
+    @Override
+    public ViewModel process() {
+        return new ViewModel("end");
     }
 }

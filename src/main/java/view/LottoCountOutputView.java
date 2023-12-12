@@ -2,10 +2,11 @@ package view;
 
 import java.util.Map;
 
-public class LottoCountOutputView {
+public class LottoCountOutputView implements Viewable {
 
-    public static void printLottosCount(Map<String, Object> model) {
-        System.out.printf("구입한 로또의 개수는 %d장입니다.", model.get("size"));
+    @Override
+    public void render(Map<String, Object> model) {
+        System.out.printf("구입한 로또의 개수는 %d장 입니다.", model.get("size"));
         System.out.println();
     }
 }
